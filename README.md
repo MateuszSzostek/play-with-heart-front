@@ -1,10 +1,17 @@
 # Owlix Frontend Documentation
 
+📘 last updated: 12.03.2024\
+📗 last revived: 12.03.2024
+
 ## Introduction
 
 This comprehensive documentation serves as a guide to understanding the intricacies, functionalities, and methodologies employed throughout the project's development lifecycle.
 
 Within these pages, you will find detailed insights into the project's architecture, design principles, implementation strategies, and usage instructions. Whether you are a developer seeking to contribute to the project, a stakeholder looking to understand its inner workings, or a curious individual interested in exploring its capabilities, this documentation is crafted to cater to your needs.
+
+### What is Owlix?
+
+Owlix is a collaborative platform that bridges the gap between contractors, subcontractors, and individuals responsible for issuing invoices. It facilitates seamless interaction and document sharing among these stakeholders, enabling efficient communication and collaboration on various projects and tasks.
 
 ## Core Technlogies Used
 
@@ -137,6 +144,7 @@ At the onset of our project, we established stringent guidelines to maintain cod
 ### Local Testing:
 
 **Cypress and Jest**: Our testing strategy encompasses multiple layers. We utilize Cypress for end-to-end (E2E) and integration testing to simulate user interactions and validate application behavior across different scenarios. Additionally, Jest is employed for unit testing testing to verify the functionality of individual chunks of code and their interactions.
+
 **Pre-Commit Checks - Command Utilization**: Before committing any changes, we run a pre-commit hook to execute ESLint, Prettier, and all tests. This ensures that our code adheres to coding standards, consistent formatting, and passes all tests (unit, integration, and E2E) before being integrated into the codebase.To streamline our development workflow and ensure adherence to coding standards, we have integrated the following command:
 
 ```bash
