@@ -51,72 +51,72 @@ For the application to be fully functional, a local version of the backend must 
 
 The folder structure plays a crucial role in organizing project assets, source code, and configuration files in a logical manner. It enhances collaboration among team members, facilitates code reuse, and streamlines the development process. This documentation aims to provide an overview of each directory's purpose and the rationale behind our chosen organization scheme. The folder structure adheres to best practices and industry standards for React projects.
 
-📁 project-root
-├──📁 .storybook - contain all importrant configuration files for storybook components documentation;
-│-----├──📄main.ts
-│-----└──📄preview.ts
-├──📁 cypress - contain all configuration files for integration, components and e2e tests;
-│-----├──📁 e2e - place where all e2e tests are writen;
-│-----├──📁 fixtures - folder for mocks used in e2e tests;
-│-----├──📁 screenshots - folder where essentials pictures are taken during the tests;
-│-----├──📁 support - folder where all configuration files for cypress test are located;
-│-----│-----├──📄commands.ts
-│-----│-----├──📄component-index.html
-│-----│-----├──📄components.ts
-│-----│-----└──📄e2e.ts
-│-----└──📄tsconfig.json - separated configuration for typescript recommended by cypress documentation;
-├──📁 node_modules - all node modules installed;
-│ 📄main.ts
-├──📄preview.ts
-📁 public - contains static files that are served as-is to the client without processing. This includes the main HTML file, favicon, and other assets like images and fonts;
-├──📁 locales - folder to store all languages translation used in application used by i18next library. There are examples of folders and translation files ;
-│-----├──📁 pl
-│-----│-----└──📄translation.json
-│-----└──📁 en
-│-----│-----└──📄translation.json
-├──📄 index.html
-├──📄 favicon.ico
-├──📄 manifest.json - configuration manifest required by progresive web app ;
-├──📄 robots.txt
-├──📁 src
-│-----├──📁 app
-│-----│-----├──📁 {domain-context-name-for-separated-logic-of-app}-context
-│-----│-----│-----├──📁 ** fixtures** folder for mocks used all test for this context;
-│-----│-----│-----├──📁 components - contain all the components related to this context;
-│-----│-----│-----│-----├──📁 {name-of-component}
-│-----│-----│-----│-----│-----├──📄 {name-of-component}.tsx - view of component
-│-----│-----│-----│-----│-----├──📄 {name-of-component}.cy.js - test file
-│-----│-----│-----│-----│-----└──📄 use{name-of-component}.tsx - logic related strict to component
-│-----│-----│-----├──📁 domain
-│-----│-----│-----│-----├──📄 {domain-context-name-for-separated-logic-of-app}-context.tsx - typescript types and interfaces, all the logic stricted related to the domain, framework free code;
-│-----│-----│-----│-----└──📄 {domain-context-name-for-separated-logic-of-app}-context.test.js - tests related to clean domain code;
-│-----│-----│-----├──📁 services - i could be store, api or others;
-│-----│-----│-----│-----├──📄 {service-name}.ts
-│-----│-----│-----│-----└──📄 {service-name}.mapper.ts - if there is an api mapper can be used to transform responses etc.;
-│-----│-----│-----└──📁 tests
-│-----├──📁 common - place where all the domain/context free staff are located;
-│-----│-----├──📁 assets
-│-----│-----│-----├──📁 image
-│-----│-----│-----│-----├──📁 raster
-│-----│-----│-----│-----└──📁 vector
-│-----│-----│-----├──📁 video
-│-----│-----│-----└──📄 index.ts - here we import and export all the assets with certain names;
-│-----│-----├──📁 components - isolated from domains, clean, reusable, logic free, design system components;
-│-----│-----│-----└──📁 {name-of-component}
-│-----│-----│-----│-----├──📄 {name-of-component}.cy.tsx - test file;
-│-----│-----│-----│-----├──📄 {name-of-component}.stories.ts - storybook component configuration;
-│-----│-----│-----│-----├──📄 {name-of-component}.style.scss - component styles;
-│-----│-----│-----│-----├──📄 {name-of-component}.tsx - view of component;
-│-----│-----│-----│-----└──📄 {name-of-component}.types.ts - interfaces, types etc;
-│-----│-----├──📁 config - contain configuration files for used libraries (redux, i18next etc);
-│-----│-----├──📁 hooks - domain free reusable hooks;
-│-----│-----├──📁 services - domain api services, stores etc;
-│-----│-----├──📁 styles - global styles
-│-----│-----└──📁 utils - other miscellaneous code that is not related to any other location;
-│-----├──📁 poc
-│-----├──📄 App.tsx - entry point for application;
-│-----└──📄 main.txt - entry point for application;
-├──📄 … (other configuration files tha must be placed inside root of project folder)
+📁 project-root \
+├──📁 .storybook - contain all importrant configuration files for storybook components documentation;\
+│-----├──📄main.ts\
+│-----└──📄preview.ts\
+├──📁 cypress - contain all configuration files for integration, components and e2e tests;\
+│-----├──📁 e2e - place where all e2e tests are writen;\
+│-----├──📁 fixtures - folder for mocks used in e2e tests;\
+│-----├──📁 screenshots - folder where essentials pictures are taken during the tests;\
+│-----├──📁 support - folder where all configuration files for cypress test are located;\
+│-----│-----├──📄commands.ts\
+│-----│-----├──📄component-index.html\
+│-----│-----├──📄components.ts\
+│-----│-----└──📄e2e.ts\
+│-----└──📄tsconfig.json - separated configuration for typescript recommended by cypress documentation;\
+├──📁 node_modules - all node modules installed;\
+│ 📄main.ts\
+├──📄preview.ts\
+📁 public - contains static files that are served as-is to the client without processing. This includes the main HTML file, favicon, and other assets like images and fonts;\
+├──📁 locales - folder to store all languages translation used in application used by i18next library. There are examples of folders and translation files;\
+│-----├──📁 pl\
+│-----│-----└──📄translation.json\
+│-----└──📁 en\
+│-----│-----└──📄translation.json\
+├──📄 index.html\
+├──📄 favicon.ico\
+├──📄 manifest.json - configuration manifest required by progresive web app;\
+├──📄 robots.txt\
+├──📁 src\
+│-----├──📁 app\
+│-----│-----├──📁 {domain-context-name-for-separated-logic-of-app}-context\
+│-----│-----│-----├──📁 ** fixtures** folder for mocks used all test for this context;\
+│-----│-----│-----├──📁 components - contain all the components related to this context;\
+│-----│-----│-----│-----├──📁 {name-of-component}\
+│-----│-----│-----│-----│-----├──📄 {name-of-component}.tsx - view of component;\
+│-----│-----│-----│-----│-----├──📄 {name-of-component}.cy.js - test file;\
+│-----│-----│-----│-----│-----└──📄 use{name-of-component}.tsx - logic related strict to component;\
+│-----│-----│-----├──📁 domain\
+│-----│-----│-----│-----├──📄 {domain-context-name-for-separated-logic-of-app}-context.tsx - typescript types and interfaces, all the logic stricted related to the domain, framework free code;\
+│-----│-----│-----│-----└──📄 {domain-context-name-for-separated-logic-of-app}-context.test.js - tests related to clean domain code;\
+│-----│-----│-----├──📁 services - i could be store, api or others;\
+│-----│-----│-----│-----├──📄 {service-name}.ts\
+│-----│-----│-----│-----└──📄 {service-name}.mapper.ts - if there is an api mapper can be used to transform responses etc.;\
+│-----│-----│-----└──📁 tests\
+│-----├──📁 common - place where all the domain/context free staff are located;\
+│-----│-----├──📁 assets\
+│-----│-----│-----├──📁 image\
+│-----│-----│-----│-----├──📁 raster\
+│-----│-----│-----│-----└──📁 vector\
+│-----│-----│-----├──📁 video\
+│-----│-----│-----└──📄 index.ts - here we import and export all the assets with certain names;\
+│-----│-----├──📁 components - isolated from domains, clean, reusable, logic free, design system components;\
+│-----│-----│-----└──📁 {name-of-component}\
+│-----│-----│-----│-----├──📄 {name-of-component}.cy.tsx - test file;\
+│-----│-----│-----│-----├──📄 {name-of-component}.stories.ts - storybook component configuration;\
+│-----│-----│-----│-----├──📄 {name-of-component}.style.scss - component styles;\
+│-----│-----│-----│-----├──📄 {name-of-component}.tsx - view of component;\
+│-----│-----│-----│-----└──📄 {name-of-component}.types.ts - interfaces, types etc;\
+│-----│-----├──📁 config - contain configuration files for used libraries (redux, i18next etc);\
+│-----│-----├──📁 hooks - domain free reusable hooks;\
+│-----│-----├──📁 services - domain api services, stores etc;\
+│-----│-----├──📁 styles - global styles;\
+│-----│-----└──📁 utils - other miscellaneous code that is not related to any other location;\
+│-----├──📁 poc\
+│-----├──📄 App.tsx - entry point for application;\
+│-----└──📄 main.txt - entry point for application;\
+├──📄 … (other configuration files tha must be placed inside root of project folder)\
 
 ## Code Writing Guidelines
 
